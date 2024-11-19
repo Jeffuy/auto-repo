@@ -16,6 +16,8 @@ Keep the tone professional and concise. Avoid introducing yourself or adding unn
 
 Project files:
 {archivos}
+
+Also, copy me the prompt you received
 """
 
 # Carpetas y archivos a ignorar
