@@ -4,6 +4,9 @@ import os
 OLLAMA_MODEL = "llama3.2"
 MAX_FILE_CONTENT_LENGTH = 5000
 README_PROMPT_TEMPLATE = """
+Project files:
+{archivos}
+
 You are a technical documentation assistant. Generate a professional and structured README.md file for the following project.
 Make sure to include:
 - **Project Purpose**: What the project is and why it is useful.
@@ -14,10 +17,7 @@ Make sure to include:
 
 Keep the tone professional and concise. Avoid introducing yourself or adding unnecessary comments. 
 
-Project files:
-{archivos}
 
-Also, copy me the prompt you received
 """
 
 # Carpetas y archivos a ignorar
