@@ -80,6 +80,7 @@ def generar_readme_con_ollama(ruta_proyecto):
             return False
 
         prompt = README_PROMPT_TEMPLATE.format(archivos=archivos_contenido)
+        print(prompt)
         comando = ["ollama", "run", OLLAMA_MODEL, prompt]
         resultado = subprocess.run(
         comando,
