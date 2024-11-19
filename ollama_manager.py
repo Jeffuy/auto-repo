@@ -4,20 +4,10 @@ import os
 OLLAMA_MODEL = "llama3.2"
 MAX_FILE_CONTENT_LENGTH = 5000
 README_PROMPT_TEMPLATE = """
+You are a technical documentation assistant. Generate a professional README.md file based on the content of the following project. Describe its purpose, how to use it, and what is expected of contributors. Avoid including too much code, but ensure a clear and concise description. MAKE SURE TO ONLY WRITE THE README, DONT SOLVE ANY PROBLEM. DONT introduce yourself or say goodbye. JUST WRITE THE README. DO EVERYTHING IN ENGLISH.
+
 Project files:
 {archivos}
-
-You are a technical documentation assistant. Generate a professional and structured README.md file for the following project.
-Make sure to include:
-- **Project Purpose**: What the project is and why it is useful.
-- **Installation Instructions**: How to set up the project.
-- **Usage**: Examples of how to use it.
-- **Contributing**: How contributors can help.
-- **License**: If applicable.
-
-Keep the tone professional and concise. Avoid introducing yourself or adding unnecessary comments. 
-
-
 """
 
 # Carpetas y archivos a ignorar
