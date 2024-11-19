@@ -1,7 +1,7 @@
 import subprocess
 import os
 
-OLLAMA_MODEL = "llama3.2"
+OLLAMA_MODEL = "qwen2.5-coder"
 MAX_FILE_CONTENT_LENGTH = 5000
 README_PROMPT_TEMPLATE = """
 Project files:
