@@ -52,7 +52,7 @@ def listar_archivos_y_contenido(ruta):
             if debe_ignorar(ruta_completa):
                 continue
             try:
-                with open(ruta_completa, "r", encoding="utf-8") as f:
+                with open(ruta_completa, "r", encoding="utf-8", errors="replace") as f:
                     contenido = f.read()[:MAX_FILE_CONTENT_LENGTH]
                     archivos_contenido.append(f"Archivo: {archivo}\n{contenido}\n")
             except Exception as e:
@@ -71,7 +71,13 @@ def generar_readme_con_ollama(ruta_proyecto):
 
         prompt = README_PROMPT_TEMPLATE.format(archivos=archivos_contenido)
         comando = ["ollama", "run", OLLAMA_MODEL, prompt]
-        resultado = subprocess.run(comando, capture_output=True, text=True)
+        resultado = subprocess.run(
+        comando,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace"
+        )
 
         if resultado.returncode != 0:
             print("Error al comunicarse con OLLAMA:", resultado.stderr)
