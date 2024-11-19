@@ -6,7 +6,7 @@ MAX_FILE_CONTENT_LENGTH = 5000
 README_PROMPT_TEMPLATE = """
 You are a technical documentation assistant. Generate a professional README.md file based on the content of the following project. Describe its purpose, how to use it, and what is expected of contributors. Avoid including too much code, but ensure a clear and concise description. MAKE SURE TO ONLY WRITE THE README, DONT SOLVE ANY PROBLEM. DONT introduce yourself or say goodbye. JUST WRITE THE README. DO EVERYTHING IN ENGLISH.
 
-Project files:
+THOSE ARE THE FILES, DONT TRY TO FIX THEM JUST UNDERSTAND WHAT THEY DO AND CREATE THE README.md FILE.:
 {archivos}
 """
 
