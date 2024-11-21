@@ -1,61 +1,44 @@
-# Proyecto de Gestión de Repositorios
-## Descripción
+# README
 
-Este proyecto es una herramienta de gestión de repositorios en GitHub, diseñada para ayudar a los desarrolladores a crear, mantener y compartir proyectos de manera eficiente. La herramienta utiliza la API de GitHub y el modelo LLM OLLAMA para generar un archivo README con ayuda del usuario.
+## Proyecto de Gestión de Repositorios en GitHub
 
-## Uso
+Este proyecto es una herramienta Python que permite crear y gestionar repositorios en GitHub de manera automática. Se utiliza un modelo LLM (Large Language Model) para generar el contenido del README.md.
 
-1. Seleccionar el tipo de repositorio deseado (nuevo o existente).
-2. Introducir la ruta del proyecto.
-3. Seleccionar la opción de crear un nuevo repositorio o subir cambios a un repositorio existente.
-4. La herramienta generará un archivo README con ayuda del usuario utilizando el modelo LLM OLLAMA.
+### Funcionalidades
 
-## Funcionalidades
+- Creación de un nuevo repositorio en GitHub
+- Inicialización de un nuevo repositorio local con la configuración adecuada
+- Actualización de un repositorio existente con los cambios realizados
 
-* Creación de nuevos repositorios en GitHub
-* Subida de cambios a repositorios existentes
-* Generación de archivos README con ayuda del usuario
-* Utilización de la API de GitHub para interactuar con los repositorios
+### Requisitos
 
-## Arquitectura
+- Python 3.x
+- Ollama (un modelo LLM)
+- Git y GitHub cuenta
+- Conocimientos básicos de Git y GitHub
 
-La herramienta se compone de varios módulos, cada uno con su propia responsabilidad:
+### Uso
 
-* `gitignore_manager.py`: Gestiona el archivo `.gitignore` y ignora carpetas y archivos irrelevantes.
-* `github_manager.py`: Interactúa con la API de GitHub para crear y subir repositorios.
-* `ollama_manager.py`: Genera un archivo README con ayuda del usuario utilizando el modelo LLM OLLAMA.
+1. Clonar el repositorio local.
+2. Ejecutar `python main.py` para iniciar la herramienta.
 
-## Requisitos
+### Contribuyentes
 
-* Python 3.x
-* Git
-* OLLAMA instalado en el sistema operativo
+Se espera que los contribuyentes sigan las siguientes normas:
 
-## Contribuyentes
+- Utilicen la estructura de directorios y archivos existente en el proyecto.
+- Proporcionen un archivo `.env` con las variables de entorno necesarias.
+- Verifiquen que la función `verificar_y_generar_readme` se ejecute correctamente antes de iniciar el repositorio.
 
-Este proyecto está abierto a contribuciones. Si deseas ayudar, por favor envíase una solicitud de colaboración al correo electrónico asociado con la variable `GITHUB_USERNAME` en el archivo `.env`.
+### Archivos y Directorios
 
-# Contribuir
-Para contribuir al proyecto, sigue los siguientes pasos:
+- `.env`: archivo de configuración con las variables de entorno necesarias.
+- `gitignore_manager.py`: archivo que gestiona los archivos a ignorar en Git.
+- `github_manager.py`: archivo que gestiona la creación y actualización de repositorios en GitHub.
+- `main.py`: archivo principal del proyecto que llama a las funciones necesarias para inicializar o actualizar un repositorio.
+- `ollama_manager.py`: archivo que utiliza el modelo LLM Ollama para generar el contenido del README.md.
 
-1. Clona el repositorio localmente.
-2. Crea una nueva rama para tu trabajo: `git branch nombre-rama`
-3. Realiza tus cambios y actualiza la rama principal: `git pull --rebase origin nombre-rama`
-4. Compite tus cambios: `git commit -m "Mensaje del commit"`
-5. Crea un nuevo Merge Request en GitHub.
-6. Espera a que se aprueben tus cambios.
+### Condiciones de Uso
 
-# Arquitectura de Docker
-El proyecto utiliza Docker para crear una imagen ligera y eficiente.
-
-* La imagen de base es `python:3.9-slim`
-* Se agregan los siguientes paquetes:
- + `gitignore-manager`
- + `github-manager`
- + `ollama-manager`
-
-# Configuración de Kubernetes
-La herramienta se puede desplegar en un clúster de Kubernetes utilizando la API de Docker.
-
-* La configuración de deployment utiliza el formato YAML.
-* Se define un servicio de tipo LoadBalancer para acceder al proyecto desde fuera del clúster.
+- La herramienta solo funciona con la versión actual del modelo LLM Ollama. No aplica la actualización automática al modelo, por lo que es necesario descargárselo y instalarlo manualmente.
+- El uso de la herramienta debe ser autorizado mediante una cuenta GitHub. Los cambios en el proyecto requieren la confirmación de un administrador.

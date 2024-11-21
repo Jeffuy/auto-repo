@@ -18,7 +18,7 @@ IGNORAR_CARPETAS = [
 IGNORAR_ARCHIVOS = [
     ".DS_Store", "Thumbs.db", "desktop.ini", "*.log", "*.tmp", "*.lock", "*.swp",
     "*.class", "*.o", "*.obj", "*.so", "*.dll", "*.exe", "*.pyc", "*.pyo",
-    "*.pyd", "*.db", "*.sqlite3", "*.env"
+    "*.pyd", "*.db", "*.sqlite3", "*.env", "README.md"
 ]
 
 def debe_ignorar(ruta):
